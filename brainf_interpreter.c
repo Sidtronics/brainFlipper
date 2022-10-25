@@ -29,10 +29,9 @@
 */
 
 #include <stdio.h>
-#include <string.h>
 #include <stdbool.h>
 
-char pmem[30000];
+char pmem[30000] = {0};
 char* ptr = pmem;
 FILE* prog;
         
@@ -42,8 +41,6 @@ int main(int argc, char* argv[]) {
     
     if(argc != 2) return 1; 
      
-    memset(pmem , 0, 30000);
-
     prog = fopen(argv[1], "r");
 
     while(1) {

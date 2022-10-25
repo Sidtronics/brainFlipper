@@ -1,7 +1,7 @@
 # brainFlipper
 brainFlipper is simplest brainf\*ck interpreter you would ever find.
 Which means it can execute your code as long as it is syntactically correct.
-It wont give error message on wrong syntax but it will do something else which will be explained [below](https://github.com/Sidtronics/brainFlipper/edit/master/README.md#note).
+It wont give error message on wrong syntax but it will do something else which will be explained [below](https://github.com/Sidtronics/brainFlipper/master/README.md#note).
 Some sample brainf\*ck program are also provided.
 ## Features
 1) Non command charaters are ignored and treated as comment.

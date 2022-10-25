@@ -30,13 +30,13 @@
 
 #include <stdio.h>
 #include <string.h>
-
+#include <stdbool.h>
 
 char pmem[30000];
 char* ptr = pmem;
 FILE* prog;
         
-int processCmd(char cmd);
+bool processCmd(char cmd);
 
 int main(int argc, char* argv[]) {
     
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
     prog = fopen(argv[1], "r");
 
     while(1) {
-        char cmd = getc(prog);       
+        signed char cmd = getc(prog);       
         processCmd(cmd);
         if(cmd == EOF) break;
     }
@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
     fclose(prog);
 }
 
-int processCmd(char cmd) {
+bool processCmd(char cmd) {
 
     long int loop_start;
 
@@ -94,10 +94,10 @@ int processCmd(char cmd) {
                 break;
 
             case ']':
-                return 0;
+                return false;
 
             default:
                 break;
     }
-    return 1;
+    return true;
 }

@@ -37,5 +37,5 @@ This behaviour is intentional and can be used as a break point for debugging pur
 
 ## Uninstall
 ```
-make uninstall
+$ make uninstall
 ```

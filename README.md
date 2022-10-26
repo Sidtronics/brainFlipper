@@ -26,7 +26,7 @@ $ make clean
 eg:
 ```
 $ brainc hello_world.bf
-$ brainc sample_progs/hello_world.bf
+$ brainc programs/hello_world.bf
 ```
 ## Note
 1. When unmatched `'['` is found program will behave as if there was extra `']'` inserted at the end.

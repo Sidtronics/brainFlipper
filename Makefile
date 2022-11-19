@@ -23,12 +23,26 @@
 #
 
 BUILD = bin
+SRC = src
 DEST = /usr/local/bin
+######################
+
+objects = $(BUILD)/main.o $(BUILD)/brainVM.o
 
 .PHONY: all
 all:
 	mkdir -p $(BUILD)
-	cc brainFlipper.c -o $(BUILD)/brainc
+	$(MAKE) brainc
+
+.PHONY: brainc
+brainc: $(objects)
+	cc $(objects) -o $(BUILD)/brainc
+
+$(BUILD)/main.o: $(SRC)/brainVM.h
+	cc -c $(SRC)/main.c -o $(BUILD)/main.o
+
+$(BUILD)/brainVM.o: $(SRC)/brainVM.h
+	cc -c $(SRC)/brainVM.c -o $(BUILD)/brainVM.o
 
 .PHONY: install
 install: $(BUILD)/brainc
@@ -40,4 +54,4 @@ uninstall:
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD)/brainc
+	rm -f $(objects) $(BUILD)/brainc

@@ -3,6 +3,7 @@ brainFlipper is simple brainf\*ck interpreter written in C.
 It can execute your code as long as it is syntactically correct.
 Currently it does not give error message on wrong syntax and will have undefined behavior on wrong syntax.
 Some sample brainf\*ck program are also provided.
+Program design is inspired by [fabianishere/brainfuck](https://github.com/fabianishere/brainfuck).
 ## Features
 1) Non command charaters are allowed and are treated as comment.
 2) Supports nested loops. for eg. ` [->[->+<]<]`.

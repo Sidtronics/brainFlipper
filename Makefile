@@ -38,10 +38,10 @@ all:
 brainc: $(objects)
 	cc $(objects) -o $(BUILD)/brainc
 
-$(BUILD)/main.o: $(SRC)/brainVM.h
+$(BUILD)/main.o: $(SRC)/brainVM.h $(SRC)/main.c
 	cc -c $(SRC)/main.c -o $(BUILD)/main.o
 
-$(BUILD)/brainVM.o: $(SRC)/brainVM.h
+$(BUILD)/brainVM.o: $(SRC)/brainVM.h $(SRC)/brainVM.c
 	cc -c $(SRC)/brainVM.c -o $(BUILD)/brainVM.o
 
 .PHONY: install

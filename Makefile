@@ -25,6 +25,7 @@
 BUILD = build
 SRC = src
 DEST = /usr/local/bin
+CFLAGS = -O3 -Wall -Wextra
 ######################
 
 objects = $(BUILD)/main.o $(BUILD)/brainVM.o
@@ -36,13 +37,13 @@ all:
 
 .PHONY: brainc
 brainc: $(objects)
-	cc $(objects) -o $(BUILD)/brainc
+	cc $(CFLAGS) $(objects) -o $(BUILD)/brainc
 
 $(BUILD)/main.o: $(SRC)/brainVM.h $(SRC)/main.c
-	cc -c $(SRC)/main.c -o $(BUILD)/main.o
+	cc -c $(CFLAGS) $(SRC)/main.c -o $(BUILD)/main.o
 
 $(BUILD)/brainVM.o: $(SRC)/brainVM.h $(SRC)/brainVM.c
-	cc -c $(SRC)/brainVM.c -o $(BUILD)/brainVM.o
+	cc -c $(CFLAGS) $(SRC)/brainVM.c -o $(BUILD)/brainVM.o
 
 .PHONY: install
 install: $(BUILD)/brainc

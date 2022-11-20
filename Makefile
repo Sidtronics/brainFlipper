@@ -22,7 +22,7 @@
 #	SOFTWARE.
 #
 
-BUILD = bin
+BUILD = build
 SRC = src
 DEST = /usr/local/bin
 ######################

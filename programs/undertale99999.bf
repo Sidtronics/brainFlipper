@@ -7,8 +7,8 @@ C1 ESC SB 0 m
 +++++++++[->>++++++++++<<]>>+<< SB
 ++++++[->>>++++++++<<<] 0
 ++++++++++[->>>>+++++++++++<<<<]>>>>-<<< m
-.>.>+++.---.>. set font colour = black
-<<<.>.>++++.---.>. set bg = red
+.>.>++++.----.>. set font colour = red
+<<<.>.>+++.--.>. set bg = black
 <++++++++[.] print 9 indefinitely
 
 This program won't terminate automatically; use Ctrl C to terminate

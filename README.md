@@ -31,5 +31,5 @@ $ brainc programs/hello_world.bf
 ```
 ## Uninstall
 ```
-$ make uninstall
+$ sudo make uninstall
 ```
